@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: benford-analyzer-frontend
+    env: node
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NEXT_PUBLIC_API_URL
+        value: https://twoja-aplikacja-backend.onrender.com
+      - key: NODE_ENV
+        value: production
